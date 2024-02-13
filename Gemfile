@@ -69,5 +69,15 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-
+  gem 'webmock'
+  gem 'rspec-rails'
 end
+
+# Devise gem for authentication
+gem 'devise'
+
+# Net-HTTP gem for  HTTP requests
+gem 'net-http'
+
+# Dotenv-rails gem to set the Env Variables
+gem 'dotenv-rails'

@@ -1,0 +1,30 @@
+<!-- app/views/events/index.html.erb -->
+
+<% if flash[:notice] || flash[:alert] %>
+  <!-- Display an alert using JavaScript for flash notices or alerts -->
+  <script>
+    alert("<%= flash[:notice] || flash[:alert] %>");
+  </script>
+<% end %>
+
+<h1>Events</h1>
+
+<!-- Section for EventA -->
+<h2>EventA</h2>
+<%= link_to 'Create EventA', create_event_a_event_path(id: current_user.id), method: :post %>
+<!-- List of EventA items -->
+<ul>
+  <% @events_a.each do |event| %>
+    <li><%= event.title %> - <%= event.description %></li>
+  <% end %>
+</ul>
+
+<!-- Section for EventB -->
+<h2>EventB</h2>
+<%= link_to 'Create EventB', create_event_b_event_path(id: current_user.id), method: :post %>
+<!-- List of EventB items -->
+<ul>
+  <% @events_b.each do |event| %>
+    <li><%= event.title %> - <%= event.description %></li>
+  <% end %>
+</ul>
